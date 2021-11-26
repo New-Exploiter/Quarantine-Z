@@ -52,7 +52,7 @@ local function Name(character)
             if character ~= nil and character:FindFirstChild("HumanoidRootPart") ~= nil and character:FindFirstChild("Humanoid") ~= nil and character:FindFirstChild("Humanoid").Health > 0 and character:FindFirstChild("FacingPart") ~= nil and character.Name ~= "RagDoll" or settings.RagDolls == true then
                         local vector, onscreen = camera:WorldToViewportPoint(character[settings.Part].Position)
 
-                        if onscreen and game.Players:FindFirstChild(tostring(character)) ~= nil and localplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and getWeapon(tostring(character)) ~= nil then
+                        if onscreen and game.Players:FindFirstChild(tostring(character)) ~= nil and localplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and getWeapon(tostring(character)).Value ~= nil then
                             NameTag.Position = Vector2.new(vector.X,vector.Y)
                             NameTag.Visible = true
                             local weapon = getWeapon(tostring(character))
